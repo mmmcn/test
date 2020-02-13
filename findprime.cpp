@@ -21,6 +21,5 @@ int main()
     }
     for(int i=0;i<pnum;i++)
         (i+1)%10==0?printf("%d\n",prime[i]):printf("%d ",prime[i]);
-
 	return 0;
 }
