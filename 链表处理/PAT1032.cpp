@@ -17,12 +17,13 @@ int main()
 {
 
     int start1,start2,N;
-    cin>>start1>>start2>>N;
+    scanf("%d%d%d",&start1,&start2,&N);
+    //cin>>start1>>start2>>N;
     int add,next;
     char data;
     for(int i=0;i<N;i++)
     {
-        cin>>add>>data>>next;
+        scanf("%d %c %d",&add,&data,&next);
         node[add].data=data;
         node[add].next=next;
     }
