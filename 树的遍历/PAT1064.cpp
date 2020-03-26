@@ -58,3 +58,29 @@ int main(){
 	printf("\n");
 	return 0;
 }
+//以下为简洁版，长时间不做都忘记完全二叉树的特性了
+#include <bits/stdc++.h>
+using namespace std;
+const int maxn=1001;
+int n,data[maxn],CBT[maxn];
+int Index=0;
+void inorder(int root)
+{
+	if(root>n) return ;
+	inorder(root*2);
+	CBT[root]=data[Index++];
+	inorder(root*2+1);
+	
+}
+int main(){
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+		scanf("%d",&data[i]);
+	sort(data,data+n);      //从小到大排序
+	inorder(1);
+	printf("%d",CBT[1]);
+	for(int i=2;i<=n;i++)
+		printf(" %d",CBT[i]);
+	printf("\n");
+	return 0;
+}
